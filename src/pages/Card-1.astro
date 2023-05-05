@@ -3,24 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="All Cards.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<nav>
-			<a href="Card-1">Card-1</a>
-			<a href="#">Posts</a>
-			<a href="#">Contact</a>
-		  </nav>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+            Здесь собраны все статьи о тестировании.
 		</p>
 		<ul role="list" class="link-card-grid">
-
-			
-
 			<Card
-				href="Card-2"
+				href="/"
+				title="Index"
+				body="На Главную."
+			/>
+			<Card
+				href="Card-2/"
 				title="Integrations"
 				body="Supercharge your project with new frameworks and libraries."
 			/>
