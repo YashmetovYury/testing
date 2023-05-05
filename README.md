@@ -1,64 +1,35 @@
-# [Astro](https://astro.build) Blog Template
+---
+title: Astro
+description: The basics example astro app, utilizing `serve` to serve the built app
+tags:
+  - astro
+  - serve
+---
 
-[![Screenshot](screenshot.png)](https://astro-blog-template.netlify.app/)
+# Astro Basic
 
-## 👉 Check out the ✨ [Live Demo](https://astro-blog-template.netlify.app/) ✨
+This is a the [astro basic example](https://github.com/withastro/astro/tree/main/examples/basics) that uses [serve](https://www.npmjs.com/package/serve)
 
-## 👩‍🚀 Getting Started
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/0768LP?referralCode=ySCnWl)
 
-### Locally
+## ✨ Features
 
-```
-npm init astro -- --template Charca/astro-blog-template
-```
+- Astro basic example
+- Serve
 
-### On StackBlitz
+## 💁‍♀️ How to use
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/charca/astro-blog-template)
+- Install required dependencies with `npm install`
+- Start the server for development `npm run dev`
 
-## ✨ Features:
+    (The original `start` command has been more appropriately renamed to `dev`)
 
-- ✅ Astro 1.0
-- ✅ Dark Mode
-- ✅ Full Markdown support
-- ✅ SEO-friendly setup with canonical URLs and OpenGraph data
-- ✅ RSS 2.0 generation
-- ✅ Sitemap.xml generation
+## ❓ Why use `serve`
 
-## 🚀 Project Structure
+By default Railway will use the `start` script defined in package.json to run your app, the problem with that for the default basic example project is that the start script starts a development server
+not fit to run on railway, for reasons such as:
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   ├── robots.txt
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Tour.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3030`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [Astro's documentation](https://github.com/withastro/astro) or jump into Astro's [Discord server](https://astro.build/chat).
+ - Starts a file watching development server that's resource intensive
+ - Has a tendency for ram to get out of hand (>600mb)
+ - Doesn't listen on the railway provided PORT variable
+ - Not as stable or performant as `serve`
