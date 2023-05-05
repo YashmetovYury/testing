@@ -10,6 +10,7 @@ tags:
 
 This is a the [astro basic example](https://github.com/withastro/astro/tree/main/examples/basics) that uses [serve](https://www.npmjs.com/package/serve)
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/0768LP?referralCode=ySCnWl)
 
 ## ✨ Features
 
@@ -32,8 +33,3 @@ not fit to run on railway, for reasons such as:
  - Has a tendency for ram to get out of hand (>600mb)
  - Doesn't listen on the railway provided PORT variable
  - Not as stable or performant as `serve`
-
-
- ---
- template deploy ok
- 
