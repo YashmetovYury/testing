@@ -1,16 +1,14 @@
 ---
 const links = [
     { url: '/', title: 'Home' },
-    { url: '/products', title: 'Products' },
-    { url: '/github-stats', title: 'GitHub-Stats' },
-    { url: '/projects', title: 'Projects' },
+    { url: '/links', title: 'Links' },
 ]
 ---
-<div class="border-b border-gray-600 pt-7">
+<div class="border-b border-gray-600 pt-12">
 <nav class="flex h-[50px] absolute top-0 left-0 right-0 px-4 items-center justify-between ">
     <h2 class="text-lg font-bold">Astro Projects</h2>
     <ul class="list-none flex">
-        { links.map((link => <li class="mr-2"><a class="text-cyan-400" href={link.url}>{link.title}</a></li>))}
+        { links.map((link => <li class="mr-2"><a class="" href={link.url}>{link.title}</a></li>))}
     </ul>
 </nav>
 </div>
