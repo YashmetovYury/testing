@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Links';
+const description = 'All Links.';
+const permalink = `${Astro.site.href}links`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="links">
+  <div class="container">
+    <h1>Links</h1>
+    
+    <p><a href="https://medium.com/nuances-of-programming/%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9-%D0%B2%D0%B5%D0%B1-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA-astro-%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D1%8B%D0%B9-%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-92d19d7dfcd9" target="_blank">Супербыстрый веб-фреймворк Astro: подробный обзор</a>.</p>
+    <p><a href="https://nuancesprog.ru/p/16819/" target="_blank">Создаем первый «Astroвной» проект</a>.</p>
+    <p><a href="https://medium.com/" target="_blank">Статья</a>.</p>
+
+
+  </div>
+</BaseLayout>
+
+<style>
+  .about-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    max-width: 300px;
+  }
+
+  .about-image img {
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .about-image {
+      float: none;
+      margin: 0 auto 2em;
+    }
+  }
+</style>
