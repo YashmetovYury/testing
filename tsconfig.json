@@ -1,8 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "jsx": "preserve",
-    "skipLibCheck": true,
-    "strictNullChecks": true
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
